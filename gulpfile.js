@@ -8,25 +8,23 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       watch = require('gulp-watch');
 
+//CSS
 
 gulp.task('sass', function () {
-  gulp.src('./src/sass/**/main.scss')
+  gulp.src('./src/css/scss/**/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('src/dist/css'));
+    .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch(stylePath, ['sass']);
+  gulp.watch('./src/css/scss/**/main.scss', ['sass']);
 });
 
 
 
-
-
-
-//js
+//JAVASCRIPT
 
 let jsPath = './src/js/**/*.js';
 
