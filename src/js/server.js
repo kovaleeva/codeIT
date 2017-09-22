@@ -31,4 +31,3 @@ if (!module.parent) {
     exports.accept = accept;
 }
 
-console.log('Server woohoo!');

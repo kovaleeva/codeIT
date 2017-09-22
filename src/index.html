@@ -5,8 +5,6 @@
     <title>CodeIT test</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -15,36 +13,40 @@
 
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input name="name" placeholder="First Name" class="form-control" type="text">
+        <input name="name" placeholder="First Name" class="form-control" type="text" required>
     </div>
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input name="secondname" placeholder="Last Name" class="form-control" type="text">
+        <input name="secondname" placeholder="Last Name" class="form-control" type="text" required>
     </div>
 
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-        <input name="email" placeholder="E-Mail" class="form-control" type="text">
+        <input name="email" placeholder="E-Mail" class="form-control" type="text" required>
     </div>
-
-    <select class="form-control selectpicker" name="gender">
-        <option>Male</option>
-        <option>Female</option>
-    </select>
+    <div class="input-group">
+        <select class="form-control selectpicker" name="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
-        <input name="pass" placeholder="Password" class="form-control" type="password">
+        <input name="pass" placeholder="Password" class="form-control" type="password" required>
     </div>
     <div class="checkbox">
-        <label><input type="checkbox" value="">Conditions of Agreement</label>
+        <label><input type="checkbox" value="" required>Conditions of Agreement</label>
     </div>
-    <input type="submit" value="Send" onclick="loadData()"/>
+    <input type="submit" value="Send"/>
 
 
 </form>
 
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/server.js"></script>
+<!--<script src="js/server.js"></script>-->
+
 </html>
