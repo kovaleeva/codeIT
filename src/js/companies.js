@@ -176,7 +176,7 @@ $.getJSON('http://codeit.pro/frontTestTask/company/getList',
                 let companiesInCountry = $('#companiesInCountry');
                 for (var i = 0; i < companylist.length; i++) {
                     if (where == companylist[i].location.name) {
-                        companiesInCountry.append('<li class="list-group-item justify-content-between col-xs-">' + companylist[i].name + '</li>');
+                        companiesInCountry.append('<li class="list-group-item justify-content-between col-xs-6">' + companylist[i].name + '</li>');
                     }
                 }
             };
