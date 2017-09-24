@@ -1,56 +1,31 @@
 'use strict';
 
-// require("jsdom").env("", function(err, window) {
-//     if (err) {
-//         console.error(err);
-//         return;
-//     }
-//
-//     var $ = require("jquery")(window);
-// });
-//
-// function validate(form) {
-//
-//
-// }
-
-// function loadData() {
-//
-//     var xhr = new XMLHttpRequest();
-//     xhr.open('GET', 'http://codeit.pro/frontTestTask/user/registration', false);
-//     xhr.send();
-//     alert(xhr.responseText);
-//     console.log(xhr.responseText);
-// };
-
-(function () {
-    let app = {
-        initialize: function () {
-            this.modules();
-            this.setUpListeners();
-            this.validateForm();
-        },
-
-        modules: function () {
+function loadData() {
+    var msg   = $('reg').serialize();
+    $.ajax({
+        type: 'POST',
+        url: 'http://codeit.pro/frontTestTask/user/registration',
+        data: msg,
+        success: function (data) {
 
         },
-        setUpListeners: function () {
-            $('form').on('submit', app.submitForm);
-        },
-        submitForm: function (e) {
-            e.preventDefault();
-            console.log('submit');
-        },
-        validateForm: function (form) {
-            let inputs = form.find('input');
-            $.each(inputs, function (index, val) {
-                let input = $(val),
-                    value = input.val(),
-                    formGroup = input.parents('.input-group');
+        error: function (xhr, str) {
 
-            });
         }
-    };
-    app.initialize();
+    })
+};
 
-})();
+$(document).ready(function(){
+    $('input[type="submit"]').prop('disabled', true);
+
+    $("button").click(function(){
+        $.post("demo_test_post.asp",
+            {
+                name: "Donald Duck",
+                city: "Duckburg"
+            },
+            function(data,status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+    });
+});

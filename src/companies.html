@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>CodeIT test</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="itemCompnany">
+                <div class="header">
+                    <h3>Total companies</h3>
+                </div>
+                <div id="totalCompanies" class="total"></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="itemCompnany listCompanies">
+                <div class="header">
+                    <h3>List of companies</h3>
+                </div>
+                <div id="listCompanies">
+                    <ul class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 partnersBlock hidden">
+            <div class="itemCompnany">
+                <div class="header">
+                    <h3>Partners</h3>
+                    <div> Sort</div>
+                </div>
+                <div class="partners">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="itemCompnany">
+                <div class="header">
+                    <h3>Companies by location</h3></div>
+                <div id="location"></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="itemCompnany news">
+                <div class="header"><h3>News</h3></div>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators"></ol>
+                    <div class="carousel-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script src="js/companies.js"></script>
+</html>

@@ -1,0 +1,64 @@
+$green: rgba(0, 52, 18, 0.5);
+
+.container {
+  padding: 1em;
+}
+
+.itemCompnany {
+  border-radius: .4em;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #333333;
+  margin: 1em;
+  overflow: hidden;
+  height: 25em;
+  .header {
+    width: 100%;
+    background-color: rgb(208, 208, 208);
+    padding: .2em 1em;
+    h3 {
+      margin: 0;
+    }
+  }
+  .total {
+    font-size: 6em;
+    text-align: center;
+    margin-top: 1em;
+  }
+}
+
+.listCompanies {
+  overflow: scroll;
+  //
+  li:hover {
+    background-color: $green;
+  }
+}
+
+.carousel-inner {
+  height: 22.5em;
+}
+
+.item {
+  display: block;
+  padding: .5em;
+  .image {
+    max-width: 100%;
+    max-height: 15em;
+  }
+}
+
+.carousel {
+  .carousel-indicators li {
+    border: 1px solid #d0d0d0;
+  }
+  .carousel-indicators .active {
+    background-color: #d0d0d0;
+  }
+}
+
+.partnersBlock {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -3,12 +3,14 @@
 <head lang="ru">
     <meta charset="UTF-8">
     <title>CodeIT test</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
 
-<form class="sign-up-form" method="post" action="">
+<form id='reg' class="sign-up-form" method="post" action="">
     <legend class="sign-up-form__header">Sign Up</legend>
 
     <div class="input-group">
@@ -17,7 +19,7 @@
     </div>
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input name="secondname" placeholder="Last Name" class="form-control" type="text" required>
+        <input name="surname" placeholder="Last Name" class="form-control" type="text" required>
     </div>
 
     <div class="input-group">
@@ -26,27 +28,26 @@
     </div>
     <div class="input-group">
         <select class="form-control selectpicker" name="gender">
-            <option>Male</option>
-            <option>Female</option>
+            <option value="male">Male</option>
+            <option value="male">Female</option>
         </select>
     </div>
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
         <input name="pass" placeholder="Password" class="form-control" type="password" required>
     </div>
-    <div class="checkbox">
+    <div class="input- group checkbox">
         <label><input type="checkbox" value="" required>Conditions of Agreement</label>
     </div>
-    <input type="submit" value="Send"/>
-
-
+    <input type="submit" value="Send" onclick="loadData()"/>
 </form>
-
-
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 <script src="js/main.js"></script>
-<!--<script src="js/server.js"></script>-->
 
 </html>
