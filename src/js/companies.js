@@ -76,16 +76,17 @@ $.getJSON('http://codeit.pro/frontTestTask/company/getList',
             // $(this).toggleClass('active');
 
             let inner = this.innerHTML;
-            // for (var i = 0; i < companylist.length; i++) {
-            //     var comp = companylist[i];
-            //     if (inner == comp.name) {
-            //         for (var j = 0; j < comp.partners.length; i++) {
-            //             let content = comp.partners[j].name;
-            //             let value = comp.partners[j].value;
-            //             partners.append(content + ' ' + value);
-            //         }
-            //     }
-            // }
+            for (var i = 0; i < companylist.length; i++) {
+                var comp = companylist[i];
+
+                if (inner == comp.name) {
+                    for (var j = 0; j < comp.partners.length; i++) {
+                        let content = comp.partners[j].name;
+                        let value = comp.partners[j].value;
+                        partners.append(content + ' ' + value);
+                    }
+                }
+            }
         });
 
     });
