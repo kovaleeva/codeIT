@@ -31,19 +31,20 @@ $(document).ready(function () {
         return this.optional(element) || /^[a-z]+$/i.test(value);
     }, "Letters only please");
 
-    let form = $("#reg");
-    form.validate({
+    $("#reg").validate({
 
         rules: {
             name: {
                 required: true,
-                minlength: 1,
+                minlength: 3,
+                maxlength: 60,
                 lettersonly: true
             },
 
             secondname: {
                 required: true,
-                minlength: 1
+                minlength: 3,
+                maxlength: 60
             },
             email: {
                 required: true,
