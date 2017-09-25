@@ -1,31 +1,23 @@
 'use strict';
 
-function loadData() {
-    var msg   = $('reg').serialize();
-    $.ajax({
-        type: 'POST',
-        url: 'http://codeit.pro/frontTestTask/user/registration',
-        data: msg,
-        success: function (data) {
-
-        },
-        error: function (xhr, str) {
-
-        }
-    })
-};
-
 $(document).ready(function(){
-    $('input[type="submit"]').prop('disabled', true);
+    // $('input[type="submit"]').prop('disabled', true);
+    let signUp = function () {
 
-    $("button").click(function(){
-        $.post("demo_test_post.asp",
-            {
-                name: "Donald Duck",
-                city: "Duckburg"
+        $.ajax({
+            type: 'POST',
+            url: 'http://codeit.pro/frontTestTask/user/registration',
+            data: msg,
+            success: function (data) {
+
             },
-            function(data,status){
-                alert("Data: " + data + "\nStatus: " + status);
-            });
+            error: function (xhr, str) {
+
+            }
+        })
+    };
+
+    $('sign-up-submit').on('click', function () {
+        signUp();
     });
 });

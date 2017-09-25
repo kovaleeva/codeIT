@@ -8,8 +8,8 @@ html > body {
   background-color: $green;
 }
 
-form {
-  width: 30%;
+form.sign-up-form {
+  float: none;
   margin: 4em auto;
   padding: 3em 2em 2em;
   background: white;
@@ -42,21 +42,3 @@ form {
   border-color: $blue;
 }
 
-@media (max-width: 1024px) {
-  form {
-    width: 50%;
-  }
-}
-
-@media (min-width: 768px) {
-
-  div.container {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  form {
-    width: 90%;
-  }
-
-}
