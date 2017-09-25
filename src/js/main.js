@@ -55,8 +55,7 @@ $(document).ready(function () {
             },
             pass: {
                 required: true,
-                minlength: 6,
-                maxlength: 10
+                minlength: 6
             },
             checkbox: {
                 required: true
