@@ -17,7 +17,8 @@
                 <div class="header">
                     <h3>Total companies</h3>
                 </div>
-                <div id="totalCompanies" class="total"></div>
+                <div id="loader" class="loader stillLoad"></div>
+                <div id="totalCompanies" class="total itemContent"></div>
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
@@ -25,7 +26,8 @@
                 <div class="header">
                     <h3>List of companies</h3>
                 </div>
-                <div id="listCompanies">
+                <div id="loader" class="loader stillLoad"></div>
+                <div id="listCompanies" class="itemContent">
                     <ul class="list-group" id="allCompanies">
                     </ul>
                 </div>
@@ -37,9 +39,11 @@
                     <h3>Partners</h3>
                     <div>
                         Sort by:
-                        <button id="sortName" class="btn btn-outline-secondary">Name <span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+                        <button id="sortName" class="btn btn-outline-secondary">Name <span
+                                class="glyphicon glyphicon-sort" aria-hidden="true"></span>
                         </button>
-                        <button id="sortPercent" class="btn btn-outline-secondary">Percentage <span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+                        <button id="sortPercent" class="btn btn-outline-secondary">Percentage <span
+                                class="glyphicon glyphicon-sort" aria-hidden="true"></span>
                         </button>
                     </div>
                 </div>
@@ -55,17 +59,21 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div id="location">
-                    <div id="donutchart" class="col-xs-6" style=" height: 300px;"></div>
-                    <ul id="companiesHere" class="col-xs-6 list-group"></ul>
+                <div id="loader" class="loader stillLoad"></div>
+                <div class="itemContent">
+                    <div id="location">
+                        <div id="donutchart" class="col-xs-6" style=" height: 300px;"></div>
+                        <ul id="companiesHere" class="col-xs-6 list-group"></ul>
+                    </div>
+                    <ul id="companiesInCountry"></ul>
                 </div>
-                <ul id="companiesInCountry"></ul>
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
             <div class="itemCompnany news">
                 <div class="header"><h3>News</h3></div>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div id="loader" class="loader stillLoad"></div>
+                <div id="myCarousel" class="carousel slide itemContent" data-ride="carousel">
                     <ol class="carousel-indicators"></ol>
                     <div class="carousel-inner"></div>
                 </div>

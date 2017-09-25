@@ -11,6 +11,7 @@ $green: rgba(0, 52, 18, 0.5);
   margin: 1em;
   overflow: hidden;
   height: 25em;
+  position: relative;
   .header {
     width: 100%;
     background-color: rgb(208, 208, 208);
@@ -28,6 +29,23 @@ $green: rgba(0, 52, 18, 0.5);
   }
   @media screen and (max-width: 767px) {
     width: 60em;
+  }
+  .stillLoad {
+    display: none;
+  }
+  .loader {
+    border: 1em solid #d0d0d0;
+    border-top: 1em solid $green;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
   }
 }
 

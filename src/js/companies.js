@@ -1,5 +1,13 @@
 "use strict";
 
+$(document).ajaxStart(function(){
+    $(".stillLoad").css("display", "block");
+    $(".itemContent").css("display", "none");
+});
+$(document).ajaxComplete(function(){
+    $(".stillLoad").css("display", "none");
+    $(".itemContent").css("display", "block");
+});
 
 // NEWS
 //
