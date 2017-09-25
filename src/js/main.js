@@ -5,21 +5,16 @@ $(document).ready(function () {
 
 
     let signUp = function () {
-        var name = $("input[name='name']").val(),
-            secondname = $("input[name='secondname']").val(),
-            email = $("input[name='email']").val(),
-            gender = $("input[name='gender']").val(),
-            pass = $("input[name='pass']").val();
 
         $.ajax({
             method: "POST",
             url: "http://codeit.pro/frontTestTask/user/registration",
             data: {
-                name: name,
-                secondname: secondname,
-                email: email,
-                gender: gender,
-                pass: pass
+                name: $("input[name='name']").val(),
+                secondname: $("input[name='secondname']").val(),
+                email: $("input[name='email']").val(),
+                gender: $("input[name='gender']").val(),
+                pass: $("input[name='pass']").val()
             },
             success: function (data) {
                 if (data.status === 'OK') {
