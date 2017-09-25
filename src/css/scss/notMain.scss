@@ -26,12 +26,14 @@ $green: rgba(0, 52, 18, 0.5);
     text-align: center;
     margin-top: 1em;
   }
+  @media screen and (max-width: 767px) {
+    width: 60em;
+  }
 }
 
 .listCompanies,
 .itemCompnany {
   overflow: scroll;
-  //
   li:hover {
     background-color: $green;
   }
@@ -68,3 +70,4 @@ $green: rgba(0, 52, 18, 0.5);
 #companiesInCountry {
   padding-left: 0;
 }
+

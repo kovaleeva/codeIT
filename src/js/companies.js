@@ -119,13 +119,16 @@ $.getJSON('http://codeit.pro/frontTestTask/company/getList',
                 let i0 = $(this).text().replace(/\D+/g, "");
                 $(this).attr("id", i0);
             });
+            let variable = false;
             $(item).sort(function (a, b) {
-                return parseInt(b.id) - parseInt(a.id);
+                return (variable == (parseInt(b.id)) < parseInt(a.id)) ? 1 : -1;
             }).each(function () {
                 var elem = $(this);
                 elem.remove();
                 $(elem).appendTo(partners);
-            })
+            });
+            variable = variable ? false : true;
+
         };
 
         $('#sortPercent').on('click', function () {
@@ -176,7 +179,7 @@ $.getJSON('http://codeit.pro/frontTestTask/company/getList',
                 let companiesInCountry = $('#companiesInCountry');
                 for (var i = 0; i < companylist.length; i++) {
                     if (where == companylist[i].location.name) {
-                        companiesInCountry.append('<li class="list-group-item justify-content-between col-xs-6">' + companylist[i].name + '</li>');
+                        companiesInCountry.append('<li class="list-group-item justify-content-between">' + companylist[i].name + '</li>');
                     }
                 }
             };
