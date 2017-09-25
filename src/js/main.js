@@ -17,6 +17,7 @@ $(document).ready(function () {
                 pass: $('input[name="pass"]').val()
             },
             success: function (data) {
+                debugger;
                 if (data.status === 'OK') {
                     window.location.href = 'companies.html';
                 }
@@ -62,5 +63,9 @@ $(document).ready(function () {
             }
         }
     });
-    $('.sign-up-submit').on('submit', signUp);
+    $('.sign-up-submit').on('submit', function (e) {
+        debugger;
+        signUp();
+        e.preventDefault();
+    });
 });
