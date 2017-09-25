@@ -5,11 +5,11 @@ $(document).ready(function () {
 
 
     let signUp = function () {
-        var name = $('name').val(),
-            secondname = $('secondname').val(),
-            email = $('email').val(),
-            gender = $('gender').val(),
-            pass = $('pass').val();
+        var name = $("input[name='name']").val(),
+            secondname = $("input[name='secondname']").val(),
+            email = $("input[name='email']").val(),
+            gender = $("input[name='gender']").val(),
+            pass = $("input[name='pass']").val();
 
         $.ajax({
             method: "POST",
@@ -23,10 +23,10 @@ $(document).ready(function () {
             },
             success: function (data) {
                 if (data.status === 'OK') {
-                    window.location.href = 'companies.html'
+                    window.location.href = 'companies.html';
                 }
                 else {
-                    alert(data.message)
+                    alert(data.message);
                 }
             }
         });
@@ -36,7 +36,7 @@ $(document).ready(function () {
         return this.optional(element) || /^[a-z]+$/i.test(value);
     }, "Letters only please");
 
-    var form = $("#reg");
+    let form = $("#reg");
     form.validate({
 
         rules: {
@@ -66,8 +66,6 @@ $(document).ready(function () {
                 required: true
             }
         }
-
     });
-
-    $('sign-up-submit').on('submit', signUp);
+    $('.sign-up-submit').on('submit', signUp);
 });
