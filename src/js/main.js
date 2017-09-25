@@ -4,20 +4,30 @@ $(document).ready(function () {
     // $('input[type="submit"]').prop('disabled', true);
 
 
-
     let signUp = function () {
+        var name = $('name').val(),
+            secondname = $('secondname').val(),
+            email = $('email').val(),
+            gender = $('gender').val(),
+            pass = $('pass').val();
+
         $.ajax({
-            type: 'POST',
-            url: 'http://codeit.pro/frontTestTask/user/registration',
-            data: $("#reg").serialize(),
+            method: "POST",
+            url: "http://codeit.pro/frontTestTask/user/registration",
+            data: {
+                name: name,
+                secondname: secondname,
+                email: email,
+                gender: gender,
+                pass: pass
+            },
             success: function (data) {
-                console.log(data);
-                // if (data.status === 'OK') {
-                //     window.location.href = 'companies.html'
-                // }
-                // else {
-                //     alert(data.message)
-                // }
+                if (data.status === 'OK') {
+                    window.location.href = 'companies.html'
+                }
+                else {
+                    alert(data.message)
+                }
             }
         });
     };
@@ -36,7 +46,7 @@ $(document).ready(function () {
                 lettersonly: true
             },
 
-            surname: {
+            secondname: {
                 required: true,
                 minlength: 1
             },
@@ -59,9 +69,5 @@ $(document).ready(function () {
 
     });
 
-    $('sign-up-submit').on('click', function () {
-        if (form.valid()) {
-            signUp();
-        }
-    });
+    $('sign-up-submit').on('submit', signUp);
 });
