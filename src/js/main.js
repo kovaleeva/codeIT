@@ -10,11 +10,11 @@ $(document).ready(function () {
             method: "POST",
             url: "http://codeit.pro/frontTestTask/user/registration",
             data: {
-                name: $("input[name='name']").val(),
-                secondname: $("input[name='secondname']").val(),
-                email: $("input[name='email']").val(),
-                gender: $("input[name='gender']").val(),
-                pass: $("input[name='pass']").val()
+                name: $('input[name="name"]').val(),
+                secondname: $('input[name="secondname"]').val(),
+                email: $('input[name="email"]').val(),
+                gender: $('select[name="gender"]').val(),
+                pass: $('input[name="pass"]').val()
             },
             success: function (data) {
                 if (data.status === 'OK') {
@@ -31,7 +31,7 @@ $(document).ready(function () {
         return this.optional(element) || /^[a-z]+$/i.test(value);
     }, "Letters only please");
 
-    $("#reg").validate({
+    $('#reg').validate({
 
         rules: {
             name: {
